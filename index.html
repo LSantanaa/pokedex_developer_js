@@ -7,14 +7,21 @@
     <title>Pokedex</title>
 
     <!-- Normalize CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Font Roboto -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="./assets/css/global.css" />
@@ -23,82 +30,82 @@
   </head>
 
   <body>
-    <!-- <section class="content">
-        <h1>Pokedex</h1>
+    <section class="content">
+      <h1>Pokedex</h1>
 
-        <ol id="pokemonList" class="pokemons">
-            <li class="pokemon grass">
-                <span class="number">#001</span>
-                <span class="name">Bulbasaur</span>
-    
-                <div class="detail">
-                    <ol class="types">
-                       <li class="type grass">grass</li>
-                       <li class="type poison">poison</li>
-                    </ol>
-    
-                    <img src="./assets/img/1.gif"
-                         alt="bulbasaur">
-                </div>
-            </li>
-            <li class="pokemon grass">
-                <span class="number">#001</span>
-                <span class="name">Bulbasaur</span>
-    
-                <div class="detail">
-                    <ol class="types">
-                       <li class="type grass">grass</li>
-                       <li class="type poison">poison</li>
-                    </ol>
-    
-                    <img src="./assets/img/1.gif"
-                         alt="bulbasaur">
-                </div>
-            </li>
-            <li class="pokemon grass">
-                <span class="number">#001</span>
-                <span class="name">Bulbasaur</span>
-    
-                <div class="detail">
-                    <ol class="types">
-                       <li class="type grass">grass</li>
-                       <li class="type poison">poison</li>
-                    </ol>
-    
-                    <img src="./assets/img/1.gif"
-                         alt="bulbasaur">
-                </div>
-            </li>
-        </ol>
-        
-
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Load More
-            </button>
-        </div>
-    </section> -->
-
-    <section class="content pokemonDetail">
-      <div class="pokemon grass">
-        <div class="identification">
-          <span class="name">Bulbasaur</span>
+      <ol id="pokemonList" class="pokemons">
+        <li class="pokemon grass">
           <span class="number">#001</span>
-        </div>
-        <div class="detail">
-          <ol class="types">
-            <li class="type grass">grass</li>
-            <li class="type poison">poison</li>
-          </ol>
-          <img src="./assets/img/1.svg" alt="bulbasaur" />
-        </div>
+          <span class="name">Bulbasaur</span>
+
+          <div class="detail">
+            <ol class="types">
+              <li class="type grass">grass</li>
+              <li class="type poison">poison</li>
+            </ol>
+
+            <img src="./assets/img/1.gif" alt="bulbasaur" />
+          </div>
+        </li>
+        <li class="pokemon grass">
+          <span class="number">#001</span>
+          <span class="name">Bulbasaur</span>
+
+          <div class="detail">
+            <ol class="types">
+              <li class="type grass">grass</li>
+              <li class="type poison">poison</li>
+            </ol>
+
+            <img src="./assets/img/1.gif" alt="bulbasaur" />
+          </div>
+        </li>
+        <li class="pokemon grass">
+          <span class="number">#001</span>
+          <span class="name">Bulbasaur</span>
+
+          <div class="detail">
+            <ol class="types">
+              <li class="type grass">grass</li>
+              <li class="type poison">poison</li>
+            </ol>
+
+            <img src="./assets/img/1.gif" alt="bulbasaur" />
+          </div>
+        </li>
+      </ol>
+
+      <div class="pagination">
+        <button id="loadMoreButton" type="button">Load More</button>
       </div>
-      <div class="menu">
-        <ul>
-          <li><a href="#" onclick="showAbout()" class="active">About</a></li>
-          <li><a href="#" onclick="showBaseStats()">Base Stats</a></li>
-        </ul>
-      <div class="specsArea">
+    </section>
+
+    <div class="modalContainer">
+      <div class="modal pokemonDetail">
+        <div class="pokeSpecie grass">
+          <button class="closeModal">X</button>
+          <div class="pokemon">
+            <div class="identification">
+              <span class="name">Bulbasaur</span>
+              <span class="number">#001</span>
+            </div>
+            <div class="detail">
+              <ol class="types">
+                <li class="type grass">grass</li>
+                <li class="type poison">poison</li>
+              </ol>
+              <div class="pokeContainer">
+                <img src="./assets/img/1.svg" alt="bulbasaur" />
+              </div>
+            </div>
+          </div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="#" onclick="showAbout()" class="active">About</a>
+              </li>
+              <li><a href="#" onclick="showBaseStats()">Base Stats</a></li>
+            </ul>
           </div>
           <div id="aboutTable">
             <table>
@@ -121,8 +128,16 @@
               <th>Breeding</th>
               <tr>
                 <td>Gender</td>
-                <td><img src="./assets/img/gender-male.svg" alt="icon_male"> 87.5%</td>
-                <td><img src="./assets/img/gender-female.svg" alt="icon_female">12,5%</td>
+                <td>
+                  <img
+                    src="./assets/img/gender-male.svg"
+                    alt="icon_male"
+                  />87,5%
+                  <img
+                    src="./assets/img/gender-female.svg"
+                    alt="icon_female"
+                  />12,5%
+                </td>
               </tr>
               <tr>
                 <td>Egg Groups</td>
@@ -134,8 +149,110 @@
               </tr>
             </table>
           </div>
+          <div id="baseStatsTable">
+            <table>
+              <tr>
+                <td>HP</td>
+                <td>45</td>
+                <td>
+                  <progress max="255" value="45"></progress>
+                </td>
+              </tr>
+              <tr>
+                <td>Attack</td>
+                <td>60</td>
+                <td>
+                  <progress max="255" value="60"></progress>
+                </td>
+              </tr>
+              <tr>
+                <td>Defense</td>
+                <td>48</td>
+                <td>
+                  <progress max="255" value="48"></progress>
+                </td>
+              </tr>
+              <tr>
+                <td>Sp. Atk</td>
+                <td>65</td>
+                <td>
+                  <progress max="255" value="65"></progress>
+                </td>
+              </tr>
+              <tr>
+                <td>Sp. Def</td>
+                <td>65</td>
+                <td>
+                  <progress max="255" value="65"></progress>
+                </td>
+              </tr>
+              <tr>
+                <td>Speed</td>
+                <td>45</td>
+                <td>
+                  <progress max="255" value="45"></progress>
+                </td>
+              </tr>
+              <tr>
+                <td>Total</td>
+                <td>317</td>
+                <td>
+                  <progress max="600" value="317"></progress>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <script>
+      const pokemonElements = document.querySelectorAll(
+        "li.pokemon"
+      );
+      const modal = document.querySelector(".modalContainer");
+    
+      pokemonElements.forEach((pokemon) => {
+        pokemon.addEventListener("click", () => {
+          
+          modal.classList.add("visible");
+        });
+      });
+
+      const closeButton = modal.querySelector(".closeModal");
+
+      closeButton.addEventListener("click", () => {
+        modal.classList.remove("visible");
+      });
+
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.classList.remove("visible");
+        }
+      });
+
+      let opt = document.querySelectorAll(".menu a");
+
+      function toggleActive(e) {
+        opt.forEach((link) => {
+          link.classList.remove("active");
+        });
+        e.currentTarget.classList.add("active");
+      }
+      opt.forEach((link) => {
+        link.addEventListener("click", toggleActive);
+      });
+      function showAbout() {
+        document.getElementById("aboutTable").style.display = "block";
+        document.getElementById("baseStatsTable").style.display = "none";
+      }
+
+      function showBaseStats() {
+        document.getElementById("aboutTable").style.display = "none";
+        document.getElementById("baseStatsTable").style.display = "block";
+      }
+    </script>
+
     <!-- Nosso JS -->
     <!-- <script src="./assets/js/pokemon-model.js"></script>
     <script src="./assets/js/poke-api.js"></script>

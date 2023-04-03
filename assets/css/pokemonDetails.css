@@ -1,12 +1,54 @@
-.pokemonDetail .pokemon{
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  width: 80%;
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal.active + .modalContainer {
+  display: block;
+}
+
+.pokemonDetail .pokeSpecie{
+  border-radius: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+.pokemonDetail .pokemon{
   background-image: url('../img/poke_bg.svg');
   background-size: 140px;
   background-repeat: no-repeat;
   background-position: right;
+  cursor: auto;
 }
-
 .pokemonDetail .pokemon:hover{
   transform: none;
 }
@@ -17,7 +59,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 .pokemonDetail .pokemon .name{
   font-size: 1.625rem;
@@ -35,9 +76,33 @@
 .pokemonDetail .detail img{
   height: 110px;
   transform: scale(-1, 1);
+  display: block;
+  width: 100%;
 }
+
+.pokeContainer {
+  position: relative;
+  width: 200px; 
+}
+
+.pokeContainer::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  filter: blur(5px);
+}
+
+
 .menu{
   width: 100%;
+  padding-bottom: 0.8rem;
+  border-radius: 1.5rem 1.5rem 0 0;
 }
 .menu ul {
   list-style: none;
@@ -61,17 +126,76 @@
 table{
   border-collapse: collapse;
   width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 500px;
+  margin:0 auto;
 }
 
 td, th{
   padding: 6px 0px;
   text-align: left;
 }
+
 td img{
   height: 25px;
+  vertical-align: middle;
+}
+td img:last-child{
+  margin-left: 10px;
 }
 tr td:first-child{
   color: #5b5858;
 }
+progress {
+  appearance: inherit;
+  height: 8px;
+  width: 100px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #39d331;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 340px) {
+  progress{
+    width: 130px;
+  }
+}
+
+.menu, #aboutTable, #baseStatsTable{
+  background-color: #f3efef;
+}
+#aboutTable, #baseStatsTable{
+  border-radius: 0 0 1rem 1rem;
+  padding: 0px 15px 10px 15px;
+}
+#baseStatsTable{
+  display: none;
+}
+
+.closeModal{
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(214, 67, 67);
+  color: white;
+  transition: .4s ease;
+}
+.closeModal:hover{
+  transform: scale(1.05);
+  background-color: red;
+}
+.visible{
+  display: block;
+}
+

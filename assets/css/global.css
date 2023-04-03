@@ -6,9 +6,11 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #a2a3a6;
 }
-
+h1{
+    margin: 0;
+}
 .content {
     width: 100vw;
     height: 100vh;
