@@ -34,7 +34,7 @@
       <h1>Pokedex</h1>
 
       <ol id="pokemonList" class="pokemons">
-        <li class="pokemon grass">
+        <!-- <li class="pokemon grass">
           <span class="number">#001</span>
           <span class="name">Bulbasaur</span>
 
@@ -72,7 +72,7 @@
 
             <img src="./assets/img/1.gif" alt="bulbasaur" />
           </div>
-        </li>
+        </li> -->
       </ol>
 
       <div class="pagination">
@@ -102,12 +102,14 @@
           <div class="menu">
             <ul>
               <li>
-                <a href="#" onclick="showAbout()" class="active">About</a>
+                <a href="#" class="active" data-target="aboutTable">About</a>
               </li>
-              <li><a href="#" onclick="showBaseStats()">Base Stats</a></li>
+              <li>
+                <a href="#" data-target="baseStatsTable">Base Stats</a>
+              </li>
             </ul>
           </div>
-          <div id="aboutTable">
+          <div id="aboutTable" class="section">
             <table>
               <tr>
                 <td>Species</td>
@@ -149,7 +151,7 @@
               </tr>
             </table>
           </div>
-          <div id="baseStatsTable">
+          <div id="baseStatsTable" class="section">
             <table>
               <tr>
                 <td>HP</td>
@@ -206,56 +208,7 @@
       </div>
     </div>
 
-    <script>
-      const pokemonElements = document.querySelectorAll(
-        "li.pokemon"
-      );
-      const modal = document.querySelector(".modalContainer");
+    <script src="./assets/js/main.js" type="module"></script>
     
-      pokemonElements.forEach((pokemon) => {
-        pokemon.addEventListener("click", () => {
-          
-          modal.classList.add("visible");
-        });
-      });
-
-      const closeButton = modal.querySelector(".closeModal");
-
-      closeButton.addEventListener("click", () => {
-        modal.classList.remove("visible");
-      });
-
-      window.addEventListener("click", (event) => {
-        if (event.target === modal) {
-          modal.classList.remove("visible");
-        }
-      });
-
-      let opt = document.querySelectorAll(".menu a");
-
-      function toggleActive(e) {
-        opt.forEach((link) => {
-          link.classList.remove("active");
-        });
-        e.currentTarget.classList.add("active");
-      }
-      opt.forEach((link) => {
-        link.addEventListener("click", toggleActive);
-      });
-      function showAbout() {
-        document.getElementById("aboutTable").style.display = "block";
-        document.getElementById("baseStatsTable").style.display = "none";
-      }
-
-      function showBaseStats() {
-        document.getElementById("aboutTable").style.display = "none";
-        document.getElementById("baseStatsTable").style.display = "block";
-      }
-    </script>
-
-    <!-- Nosso JS -->
-    <!-- <script src="./assets/js/pokemon-model.js"></script>
-    <script src="./assets/js/poke-api.js"></script>
-    <script src="./assets/js/main.js"></script> -->
   </body>
 </html>
