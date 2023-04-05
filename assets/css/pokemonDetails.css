@@ -133,10 +133,13 @@ table{
 td, th{
   padding: 6px 0px;
   text-align: left;
+  text-transform: capitalize;
 }
-
+td{
+  font-size: .875rem;
+}
 td img{
-  height: 25px;
+  height: 15px;
   vertical-align: middle;
 }
 td img:last-child{
@@ -161,9 +164,15 @@ progress::-webkit-progress-value {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 340px) {
+@media screen and (min-width: 380px) {
   progress{
     width: 130px;
+  }
+  td{
+    font-size: 1rem;
+  }
+  td img{
+    height: 25px;
   }
 }
 

@@ -4,7 +4,8 @@ export class Pokemon {
     type;
     types = [];
     photo;
-    species;
+    photo2;
+    habitat;
     height;
     weight;
     abilities = [];
@@ -20,3 +21,5 @@ export class Pokemon {
       speed: 0
     };
   }
+  
+  
