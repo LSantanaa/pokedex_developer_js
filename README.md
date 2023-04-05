@@ -1,5 +1,9 @@
-# Trilha JS Developer - Pokedex
+# A Minha Versão da famosa Pokedex!!!
+
+
+## Trilha JS Developer - Pokedex
 ## Bootcamp Potência Tech by IFOOD (ANGULAR)
+
 
 ## SOBRE
 
