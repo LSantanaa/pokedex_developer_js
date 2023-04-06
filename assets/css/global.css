@@ -8,15 +8,72 @@
 body {
     background-color: #a2a3a6;
 }
-h1{
+
+h1 {
     margin: 0;
 }
+
 .content {
     width: 100vw;
     height: 100%;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #fffefe;
 }
+.d-flex{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    flex-shrink: 0;
+    padding: 12px;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+a {
+    display: inline-flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 48px;
+    position: relative;
+    color: black;
+  }
+  a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 5px;
+    width: 0%;
+    border-radius: 5px;
+    background-color: #23912c;
+    transition: all 0.3s ease;
+  }
+  a:hover{
+    color: #545353;
+  }
+  a:hover::before {
+    width: 100%;
+    transform-origin: center;
+  }
+  
+  .links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .links a img {
+    margin-right: 4px;
+  }
+
 
 @media screen and (min-width: 992px) {
     .content {

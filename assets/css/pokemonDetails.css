@@ -79,6 +79,23 @@
   display: block;
   width: 100%;
 }
+.pokemonDetail .detail img:hover{
+  animation: dancePoke 1s infinite ;
+}
+@keyframes dancePoke {
+  0%{
+    transform: rotate(0deg) scale(-1, 1);
+  }
+  25%{
+    transform: rotate(15deg) scale(-1, 1);
+  }
+  75%{
+    transform: rotate(-15deg) scale(-1, 1);
+  }
+  100%{
+    transform: rotate(0deg) scale(-1, 1);
+  }
+}
 
 .pokeContainer {
   position: relative;
@@ -97,7 +114,6 @@
   background-color: rgba(0, 0, 0, 0.3);
   filter: blur(5px);
 }
-
 
 .menu{
   width: 100%;
@@ -164,18 +180,6 @@ progress::-webkit-progress-value {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 380px) {
-  progress{
-    width: 130px;
-  }
-  td{
-    font-size: 1rem;
-  }
-  td img{
-    height: 25px;
-  }
-}
-
 .menu, #aboutTable, #baseStatsTable{
   background-color: #f3efef;
 }
@@ -207,4 +211,14 @@ progress::-webkit-progress-value {
 .visible{
   display: block;
 }
-
+@media screen and (min-width: 380px) {
+  progress{
+    width: 130px;
+  }
+  td{
+    font-size: 1rem;
+  }
+  td img{
+    height: 25px;
+  }
+}

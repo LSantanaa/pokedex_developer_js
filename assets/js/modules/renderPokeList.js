@@ -6,13 +6,30 @@ export default function renderPokeList() {
 
   const maxRecords = 1000;
   const limit = 12;
-  let offset = 0;
+  let offset =0;
 
   function convertPokemonToLi(pokemon) {
+    
     let soma = 0;
     for(let key in pokemon.baseStats){
       soma += pokemon.baseStats[key]
     }
+
+    let gender = '';
+
+    if(pokemon.gender.genderless){
+      gender = 'genderless'
+    }else{
+      gender =  `<img
+    src="./assets/img/gender-male.svg"
+    alt="icon_male"
+    />${pokemon.gender.male}
+    <img
+    src="./assets/img/gender-female.svg"
+    alt="icon_female"
+    />${pokemon.gender.female}`
+    }
+
 
     const li = document.createElement("li");
     li.classList.add("pokemon", pokemon.type);
@@ -86,14 +103,7 @@ export default function renderPokeList() {
               <tr>
                 <td>Gender</td>
                 <td>
-                  <img
-                    src="./assets/img/gender-male.svg"
-                    alt="icon_male"
-                  />${pokemon.gender.male}
-                  <img
-                    src="./assets/img/gender-female.svg"
-                    alt="icon_female"
-                  />${pokemon.gender.female}
+                  ${gender}
                 </td>
               </tr>
               <tr>
@@ -219,22 +229,8 @@ export default function renderPokeList() {
       newHtml.forEach(LiElement =>{
         pokemonList.appendChild(LiElement)
       })
-    
-      // const newElements = Array.from(pokemonList.children).slice(
-      //   -pokemons.length
-      // );
-      // addClickListenersToElements(newElements);
     });
   }
-
-  // function addClickListenersToElements(elements) {
-  //   elements.forEach((pokemon) => {
-  //     pokemon.addEventListener("click", () => {
-  //       const modal = document.querySelector(`.poke${pokemon.number}`);
-  //       modal.classList.add("visible");
-  //     });
-  //   });
-  // }
 
   loadPokemonItems(offset, limit);
 
@@ -252,12 +248,4 @@ export default function renderPokeList() {
     }
   });
 
-  // const observer = new MutationObserver((mutations) => {
-  //   const newElements = mutations
-  //     .map((mutation) => Array.from(mutation.addedNodes))
-  //     .flat()
-  //     .filter((node) => node.classList?.contains("pokemon"));
-  //   addClickListenersToElements(newElements);
-  // });
-  // observer.observe(pokemonList, { childList: true });
 }

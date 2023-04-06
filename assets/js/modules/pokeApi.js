@@ -38,10 +38,12 @@ export async function convertPokeApiDetailToPokemon(pokeDetail) {
       pokemon.habitat = resp.habitat.name;
     }
 
-    if (resp.gender_rate !== undefined) {
+    if (resp.gender_rate !== -1) {
       let female = (resp.gender_rate / 8) * 100;
       pokemon.gender.male = `${100 - female}%`;
       pokemon.gender.female = `${female}%`;
+    }else{
+      pokemon.gender.genderless = true
     }
 
     if (resp.egg_groups) {
@@ -91,7 +93,7 @@ export async function convertPokeApiDetailToPokemon(pokeDetail) {
   pokeDetail.sprites.other.dream_world.front_default
     ? (pokemon.photo2 = pokeDetail.sprites.other.dream_world.front_default)
     : (pokemon.photo2 = pokeDetail.sprites.front_default);
-
+      console.log(pokemon)
   return pokemon;
 }
 
