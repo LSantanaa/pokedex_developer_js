@@ -93,7 +93,7 @@ export async function convertPokeApiDetailToPokemon(pokeDetail) {
   pokeDetail.sprites.other.dream_world.front_default
     ? (pokemon.photo2 = pokeDetail.sprites.other.dream_world.front_default)
     : (pokemon.photo2 = pokeDetail.sprites.front_default);
-      console.log(pokemon)
+
   return pokemon;
 }
 
@@ -106,10 +106,16 @@ pokeApi.getPokemonDetail = async (pokemon) => {
 pokeApi.getPokemons = async (offset = 0, limit = 12) => {
   const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
-  const response = await fetch(url);
+  const response = await fetch(url)
+  .catch(error => {
+    console.log("Não foi possível carregar os pokémons: ", error)
+  })
   const jsonBody = await response.json();
   const pokemons = jsonBody.results;
+  
+  
   const detailRequests = pokemons.map(pokeApi.getPokemonDetail);
   const pokemonsDetails = await Promise.all(detailRequests);
   return pokemonsDetails;
+  
 };

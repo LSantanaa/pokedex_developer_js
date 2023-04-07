@@ -4,7 +4,7 @@ export default function renderPokeList() {
   const pokemonList = document.getElementById("pokemonList");
   const loadMoreButton = document.getElementById("loadMoreButton");
 
-  const maxRecords = 1000;
+  const maxRecords = 1279;
   const limit = 12;
   let offset =0;
 
@@ -222,13 +222,20 @@ export default function renderPokeList() {
   }
 
   function loadPokemonItems(offset, limit) {
-    pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
+    pokeApi.getPokemons(offset, limit)
+    .then((pokemons = []) => {
      
       const newHtml = pokemons.map(convertPokemonToLi);
      
       newHtml.forEach(LiElement =>{
         pokemonList.appendChild(LiElement)
       })
+      
+    }).catch(error => {
+      const sectionContent = document.querySelector('.content')
+      const p = document.createElement('p')
+      p.innerText = 'Parece que estamos com um problema, verifique sua internet e tente recarregar a página, caso o erro persista, entre em contato pelo Linkedin'
+      sectionContent.appendChild(p)
     });
   }
 

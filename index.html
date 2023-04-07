@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/img/pokebola.svg" type="image/x-icon">
-    <title>Pokedex</title>
 
-    <!-- Normalize CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    
-    <!-- Font Roboto -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/img/pokebola.svg" type="image/x-icon">
+  <title>Pokedex</title>
 
-    <link rel="stylesheet" href="./assets/css/global.css" />
-    <link rel="stylesheet" href="./assets/css/pokedex.css" />
-    <link rel="stylesheet" href="./assets/css/pokemonDetails.css" />
-  </head>
+  <!-- Normalize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <section class="content">
-      <div class="d-flex">
+  <!-- Font Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/global.css" />
+  <link rel="stylesheet" href="./assets/css/pokedex.css" />
+  <link rel="stylesheet" href="./assets/css/pokemonDetails.css" />
+
+  <script src="./assets/js/svg-inject.min.js"></script>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="container">
+      <section class="content">
+
         <h1>Pokedex</h1>
-       
-      </div>
-      <ol id="pokemonList" class="pokemons">
-       
-      </ol>
 
-      <div class="pagination">
-        <button id="loadMoreButton" type="button">Load More</button>
-      </div>
-    </section>
+        <ol id="pokemonList" class="pokemons">
 
+        </ol>
+        <div class="pagination">
+          <button id="loadMoreButton" type="button">Load More</button>
+        </div>
+      </section>
+    </div>
     <footer class="text-center">
       <div>
         <p>Desenvolvido por LsDev &copy;2023 Alguns Direitos Reservados</p>
@@ -52,15 +49,14 @@
         <a href="https://github.com/lsantanaa" target="_blank">
           <img src="./assets/img/github-logo.svg" width="20px" alt="logo-github" />Github
         </a>
-
         <a href="https://linkedin.com/in/lsantanaa" target="_blank">
           <img src="./assets/img/linkedin-logo.svg" width="20px" alt="logo-linkedin" />LinkedIn
         </a>
       </div>
     </footer>
-   
-    <script src="./assets/js/main.js" type="module"></script>
-    
-    
-  </body>
+  </div>
+  <script src="./assets/js/main.js" type="module"></script>
+
+</body>
+
 </html>

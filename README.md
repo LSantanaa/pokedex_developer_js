@@ -1,9 +1,7 @@
 # A Minha Versão da famosa Pokedex!!!
 
-
 ## Trilha JS Developer - Pokedex
 ## Bootcamp Potência Tech by IFOOD (ANGULAR)
-
 
 ## SOBRE
 
@@ -13,3 +11,18 @@ Esta é a minha versão do projeto onde pude entender melhor sobre as requisiç�
 
 Aqui você acessa a minha versão, espero que gostem - [Pokedex](https://lsantanaa.github.io/pokedex_developer_js/)
 
+### Techs 
+
+* Javascript
+* HTML
+* CSS
+* API REST
+* GIT
+
+### Dev Notes
+- Versão: **1.0** 
+- Upload: Abril/2023
+- API: https://pokeapi.co/
+  
+### Próximas Atualizações
+- Implementação de um campo de busca.
